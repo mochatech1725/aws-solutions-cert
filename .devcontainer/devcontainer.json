@@ -1,0 +1,24 @@
+{
+  "name": "AWS Development Environment",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  
+  "containerEnv": {
+    "AWS_CLI_AUTO_PROMPT": "on-partial"
+  },
+  
+  "postCreateCommand": "bash .devcontainer/setup-aws.sh",
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "amazonwebservices.aws-toolkit-vscode",
+        "ms-vscode.vscode-json"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  
+  "remoteUser": "codespace"
+}
